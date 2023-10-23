@@ -30,7 +30,7 @@ a {
 }
 
 .section-1 {
-  background-color: #539E6D;
+  background-color: #F9E24B;
 }
 
 .section-2 {
@@ -118,25 +118,20 @@ a {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 24px;
   line-height: 100%;
   color: #fdf6ec;
 }
 
-.orbit {
-  position: absolute;
-  height: 342px;
-  top: 54%;
-  left: 50%;
-  transform: translate(-30%, -70%);
+.browntext{
+  font-family: "Work Sans";
+  color: #482F24;
+  font-size: 18px;
 }
 
-.mascot {
-  position: absolute;
-  height: 250px;
-  top: 50%;
-  left: 51%;
-  transform: translate(20%, -70%);
+.logo-moodsense{
+  height: 142px;
+  margin-top: -40px;
 }
 
 /* Section 2 */
@@ -145,21 +140,21 @@ a {
   font-family: "Work Sans";
   font-weight: 700;
   font-size: 34px;
-  color: #f09e54;
+  color: #F9E24B;
   line-height: 100%;
 }
 
-.greenbody {
+.brownbody {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 100%;
-  color: #539e6d;
+  color: #482F24;
 }
 
 .scan-btn {
-  background: #539e6d !important;
+  background: #F9E24B!important;
   color: #fdf6ec !important;
   border-radius: 18px !important;
   border: none !important;
@@ -217,8 +212,9 @@ a {
     top: 48%;
   }
 
-  .mascot{
-    top: 52%;
+  .logo-moodsense{
+    height: 120px;
+    margin-top: -40px;
   }
 
   .swipeup {
@@ -263,7 +259,7 @@ a {
   }
 
   .whitetext {
-    font-size: 14px;
+    font-size: 18px;
   }
 
   .textcover {
@@ -271,17 +267,14 @@ a {
     top: 48%;
   }
 
-  .orbit {
-    height: 242px;
-    top: 58%;
-    scale: 1.3;
+  .logo-moodsense{
+    height: 80px;
+    width: 300px;
+    margin-top: -20px;
   }
 
-  .mascot {
-    top: 51%;
-    left: 45%;
-    height: 210px;
-    z-index: 9999 !important;
+  .browntext{
+    font-size: 16px;
   }
 
   .swipeup {

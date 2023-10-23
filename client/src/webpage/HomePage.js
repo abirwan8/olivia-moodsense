@@ -14,8 +14,9 @@ import BottomNavbar from "../components/home/BottomNavbar_Home";
 // Import Assets
 import Swipe1 from "../components/home/img/swipe_scanmood.png"; //swipe page 1
 import Swipe2 from "../components/home/img/swipe_orchoose.png"; //swipe page 2
-import Orbit from "../components/home/img/orbit.svg";
-import Mascot from "../components/home/icon-mood/MascotHappy.png";
+// import Orbit from "../components/home/img/orbit.svg";
+// import Mascot from "../components/home/icon-mood/MascotHappy.png";
+import Moodsense from "../components/home/img/logo-bg-kuning.png";
 
 // Import Asset Moods
 import Angry from "../components/home/icon-mood/Icon-Angry.svg";
@@ -128,9 +129,9 @@ const Home = () => {
   useEffect(() => {
     if (activeSection === 1 || activeSection === 2) {
       document.querySelectorAll(".dot-indicator .dot").forEach((dot) => {
-        dot.style.backgroundColor = "rgba(83, 158, 109, .5)";
+        dot.style.backgroundColor = "rgba(249, 226, 75, .5)";
       });
-      document.querySelector(".dot-indicator .dot.active").style.backgroundColor = "rgba(83, 158, 109, 1)";
+      document.querySelector(".dot-indicator .dot.active").style.backgroundColor = "rgba(249, 226, 75, 1)";
     } else {
       document.querySelectorAll(".dot-indicator .dot").forEach((dot) => {
         dot.style.backgroundColor = "rgba(253, 246, 236, .5)";
@@ -161,16 +162,11 @@ const Home = () => {
         {/* First Section */}
         <div className="section section-1">
           <TopBar />
-          <img className="orbit" src={Orbit} />
           <Row className="textcover">
-            <p className="whitetext">with TEANOLOGY</p>
-            <p className="yellowheading">
-              CHOOSING <br />
-              MOOD MADE <br />
-              EASIER
-            </p>
+            <p className="whitetext fw-bold">Hello, Welcome to</p>
+            <img className="logo-moodsense" src={Moodsense}></img>
+            <p className="browntext">Give a creative touch in choosing your dishes!</p>
           </Row>
-          <img className="mascot" src={Mascot} />
           <div className="swipeup">
             <img src={Swipe1} />
           </div>
@@ -180,7 +176,7 @@ const Home = () => {
         <div className="section section-2" style={SectionStyle}>
           <div>
             <center>
-              <p className="greenbody">What do you want to eat?</p>
+              <p className="brownbody">What do you want to eat?</p>
               <p className="yellowheading">SCAN YOUR MOOD!</p>
               <Link to="camera">
                 <Button className="scan-btn fw-bold">SCAN ME!</Button>
@@ -195,7 +191,7 @@ const Home = () => {
         {/* Third Section */}
         <div className="section section-3" style={SectionStyle}>
           <Row style={{ marginTop: "-75px" }}>
-            <p className="greenbody gb-24">What do you want to eat?</p>
+            <p className="brownbody gb-24">What do you want to eat?</p>
             <p className="yellowheading yh-24">Choose your mood!</p>
 
             <Container fluid className="mood-chooser">
