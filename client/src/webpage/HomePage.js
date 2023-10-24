@@ -2,7 +2,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "../components/BottomNavbar.css";
 import "../components/home/HomeStyle.css";
 import "./camera/Camera.css";
-import * as faceapi from 'face-api.js'
 import React, { useRef, useEffect, useState } from "react";
 import { Row, Col, Container, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -14,8 +13,6 @@ import BottomNavbar from "../components/home/BottomNavbar_Home";
 // Import Assets
 import Swipe1 from "../components/home/img/swipe_scanmood.png"; //swipe page 1
 import Swipe2 from "../components/home/img/swipe_orchoose.png"; //swipe page 2
-// import Orbit from "../components/home/img/orbit.svg";
-// import Mascot from "../components/home/icon-mood/MascotHappy.png";
 import Moodsense from "../components/home/img/logo-bg-kuning.png";
 
 // Import Asset Moods
@@ -27,86 +24,9 @@ import Neutral from "../components/home/icon-mood/Icon-Neutral.svg";
 import Sad from "../components/home/icon-mood/Icon-Sad.svg";
 import Surprised from "../components/home/icon-mood/Icon-Surprised.svg";
 
-let maxProbability = 0;
-let maxExpression = "";
-
-const LOCAL_STORAGE_KEY = 'maxExpressions';
-
-const storedExpressions = localStorage.getItem(LOCAL_STORAGE_KEY);
-const maxExpressions = storedExpressions ? JSON.parse(storedExpressions) : [];
-
 const Home = () => {
   const appRef = useRef(null);
-  const videoRef = useRef()
   const [activeSection, setActiveSection] = useState(0);
-
-  useEffect(() => {
-    startVideo()
-    videoRef && loadModels()
-
-  }, [])
-
-  const startVideo = () => {
-    navigator.mediaDevices.getUserMedia({ video: true })
-      .then((currentStream) => {
-        videoRef.current.srcObject = currentStream
-        videoRef.current.setAttribute('autoplay', '');
-        videoRef.current.setAttribute('muted', '');
-        videoRef.current.setAttribute('playsinline', '');
-        videoRef.current.setAttribute('width', '0');
-        videoRef.current.setAttribute('height', '0');
-      })
-      .catch((err) => {
-        console.log(err)
-      })
-  }
-
-  const loadModels = () => {
-    Promise.all([
-      // Mengambil model
-      faceapi.nets.tinyFaceDetector.loadFromUri("/models"),
-      faceapi.nets.ssdMobilenetv1.loadFromUri("/models"),
-      faceapi.nets.faceLandmark68Net.loadFromUri("/models"),
-      faceapi.nets.faceRecognitionNet.loadFromUri("/models"),
-      faceapi.nets.faceExpressionNet.loadFromUri("/models")
-
-    ]).then(() => {
-      faceMyDetect()
-    })
-  }
-
-  const faceMyDetect = () => {
-    setInterval(async () => {
-
-      const detections = await faceapi
-        .detectSingleFace(videoRef.current)
-        .withFaceLandmarks()
-        .withFaceExpressions();
-
-      // Mencari ekspresi dengan probabilitas tertinggi
-      Object.entries(detections.expressions).forEach(([expression, probability]) => {
-        if (probability > maxProbability) {
-          maxProbability = probability;
-          maxExpression = expression;
-        }
-      });
-
-      console.log(`Ekspresi : ${maxExpression} (${maxProbability})`);
-
-      // Menambahkan nilai ke dalam array maxExpressions
-      if (maxExpressions.length < 60) {
-        maxExpressions.push(maxExpression);
-      } else {
-        maxExpressions.shift();
-        maxExpressions.push(maxExpression);
-      }
-
-      localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(maxExpressions));
-
-      console.log(maxExpressions);
-
-    }, 1000)
-  }
 
   useEffect(() => {
     const appElement = appRef.current;
@@ -163,7 +83,7 @@ const Home = () => {
         <div className="section section-1">
           <TopBar />
           <Row className="textcover">
-            <p className="whitetext fw-bold">Hello, Welcome to</p>
+            <p className="whitetext fw-bold">Hi!, Welcome to</p>
             <img className="logo-moodsense" src={Moodsense}></img>
             <p className="browntext">Give a creative touch in choosing your dishes!</p>
           </Row>
@@ -245,7 +165,6 @@ const Home = () => {
         </div>
         <BottomNavbar />
         <div className="dot-indicator">
-          <video ref={videoRef} autoPlay></video>
           <div className={`dot ${activeSection === 0 ? "active" : ""}`} onClick={() => handleDotClick(0)}></div>
           <div className={`dot ${activeSection === 1 ? "active" : ""}`} onClick={() => handleDotClick(1)}></div>
           <div className={`dot ${activeSection === 2 ? "active" : ""}`} onClick={() => handleDotClick(2)}></div>
