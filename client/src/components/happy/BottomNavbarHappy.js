@@ -1,7 +1,7 @@
 import { Container } from 'react-bootstrap';
 
 import home from './icons/home-happy.svg';
-import tea from './icons/logo-happy.svg';
+import scanhappy from './icons/scan-happy.svg';
 import catalogue from './icons/catalogue-happy.svg';
 
 const BottomNavbarHappy = () => {
@@ -14,8 +14,8 @@ const BottomNavbarHappy = () => {
                 <span className="nav__text">Home</span>
             </a>
             <a href="/camera" className="nav__link ps-3 pb-3">
-                <img className="nav__icon icon-tea" alt="nav-teagreen" src={ tea }/>
-                <span className="nav__text">Scan Me!</span>
+                <img className="nav__icon icon-scan" alt="nav-teagreen" src={ scanhappy }/>
+                <span className="nav__text" style={{ marginLeft: "8px" }}>Scan Me!</span>
             </a>
             <a href="/catalogue" className="nav__link">
                 <img className="nav__icon" alt="nav-catalogue" src={ catalogue }/>
