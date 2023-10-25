@@ -1,5 +1,5 @@
 .box {
-  background-color: #f9e24b;
+  background-color: #F9E24B;
   height: 100vh;
   width: 100vw;
   overflow: hidden;
@@ -14,6 +14,13 @@
   margin-top: -10px;
 }
 
+.logo-cover {
+  position: absolute;
+  margin-top: 160px;
+  margin-left: 80px;
+  width: 700px;
+}
+
 .logo {
   margin-top: 40px;
   margin-right: 144px;
@@ -24,7 +31,7 @@
   width: 360px;
   height: 430px;
   margin-right: 120px;
-  margin-top: 24px;
+  margin-top: 90px;
   background: #fdf6ec;
   border-radius: 30px;
 }
@@ -37,7 +44,7 @@
   padding: 0 27px;
   width: 100%;
   height: 52px;
-  background: #f9e24b;
+  background: #F9E24B;
   color: #fdf6ec !important;
   border-radius: 40px;
   border: none;
@@ -50,7 +57,7 @@
   font-weight: 700;
   font-size: 32px;
   line-height: 38px;
-  color: #482f24;
+  color: #482F24;
 }
 
 .login-form {
@@ -89,20 +96,20 @@
 
 .forgot-password{
   margin-top: 18px;
-  color: #f9e24b;
+  color: #F9E24B;
   display: block;
   text-align: center;
 }
 
 .forgot-password:hover{
-  color: #f9e24b;
+  color: #F9E24B;
 }
 
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 1024px) {
   .box {
-    background-color: #f9e24b;
+    background-color: #F9E24B;
     height: 100vh;
     width: 100vw;
     overflow: hidden;
@@ -116,9 +123,10 @@
     margin-top:60px;
   }
   
-  .logo {
-    margin-top: 279px;
-    margin-right: 68px;
+  .logo-cover {
+    position: absolute;
+    margin-top: 298px;
+    margin-left: 27px;
   }
   
   .login-box {
@@ -139,7 +147,7 @@
     padding: 0 27px;
     width: 100%;
     height: 52px;
-    background: #f9e24b;
+    background: #F9E24B;
     color: #fdf6ec !important;
     border-radius: 40px;
     border: none;
@@ -152,7 +160,6 @@
     font-weight: 700;
     font-size: 32px;
     line-height: 38px;
-    color: #482f24;
   }
   
   .login-form {
@@ -191,13 +198,13 @@
   
   .forgot-password{
     margin-top: 18px;
-    color: #f9e24b;
+    color: #F9E24B;
     display: block;
     text-align: center;
   }
   
   .forgot-password:hover{
-    color: #f9e24b;
+    color: #F9E24B;
   }
 }
 
@@ -209,6 +216,10 @@
     width: 800px;
     margin-left: -65%;
     margin-top:65%;
+  }
+  
+  .logo-cover {
+    display: none;
   }
   
   .logo {
@@ -236,7 +247,7 @@
     padding: 0 27px;
     width: 100%;
     height: 52px;
-    background: #f9e24b;
+    background: #F9E24B;
     color: #fdf6ec !important;
     border-radius: 40px;
     border: none;
@@ -249,7 +260,6 @@
     font-weight: 700;
     font-size: 32px;
     line-height: 38px;
-    color: #482f24;
   }
   
   .login-form {
@@ -288,13 +298,13 @@
   
   .forgot-password{
     margin-top: 18px;
-    color: #f9e24b;
+    color: #F9E24B;
     display: block;
     text-align: center;
   }
   
   .forgot-password:hover{
-    color: #f9e24b;
+    color: #F9E24B;
   }
 }
 
