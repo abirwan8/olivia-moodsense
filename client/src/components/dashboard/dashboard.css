@@ -8,7 +8,7 @@
 }
 
 .sidebar {
-  background: #539e6d;
+  background: #f9e24b;
   color: #fdf6ec;
   min-height: 100vh;
   transition: all 0.5s;
@@ -52,24 +52,24 @@
 }
 
 a.active {
-  background-color: #539e6d;
-  color: #eda80a;
+  background-color: #f9e24b;
+  color: #482f24;
   font-weight: 700;
 }
 
 .link.active:hover {
-  color: #eda80a;
+  color: #482f24;
   transition: all 0.5s;
 }
 
 .link:hover {
-  background-color: #4a8a61 !important;
+  background-color: #d5bd20 !important;
   color: white;
 }
 
 .sign-out {
   border-radius: 100px;
-  background-color: #4a8a61 !important;
+  background-color: #d5bd20 !important;
   transition: transform 0.3s ease;
 }
 
@@ -150,7 +150,7 @@ a.active {
   margin-right: 12px;
   width: 120px;
   height: 120px;
-  background: #539e6d;
+  background: #f9e24b;
   border-radius: 100px;
 }
 
@@ -176,13 +176,13 @@ a.active {
 .add-button {
   margin-left: 6%;
   border-radius: 100px;
-  background-color: #539e6d;
+  background-color: #f9e24b;
   width: 180px;
 }
 
 .add-button:hover {
   color: #fdf6ec !important;
-  background-color: #539e6d !important;
+  background-color: #f9e24b !important;
 }
 
 .search-data {
@@ -222,7 +222,7 @@ thead {
 
 .pagination-button {
   border-radius: 100px;
-  background-color: #539e6d !important;
+  background-color: #f9e24b !important;
 }
 
 .form-data {
@@ -239,11 +239,11 @@ thead {
 }
 
 .page-link {
-  color: #539e6d;
+  color: #f9e24b;
 }
 
 .page-link:hover {
-  color: #539e6d;
+  color: #f9e24b;
 }
 
 .page-link:focus {
@@ -251,8 +251,8 @@ thead {
 }
 
 .active > .page-link {
-  background-color: #539e6d !important;
-  border-color: #539e6d !important;
+  background-color: #f9e24b !important;
+  border-color: #f9e24b !important;
 }
 
 .pagination .page-prev .page-link {
@@ -349,7 +349,7 @@ thead {
     /* margin-right: 12px; */
     /* width: 120px; */
     /* height: 120px; */
-    /* background: #539e6d; */
+    /* background: #f9e24b; */
     /* border-radius: 100px; */
     scale: 0.8;
   }
@@ -384,7 +384,7 @@ thead {
 }
 
 .card-upload-foto{
-  border: 2px dashed #539e6d !important;
+  border: 2px dashed #f9e24b !important;
   border-radius: 20px;
   background-color: #fffaf2;
 }
