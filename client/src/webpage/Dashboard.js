@@ -77,7 +77,7 @@ const Dashboard = () => {
             <h3 className="topbar-dashboard fw-bold margin-topbar-dashboard">Dashboard Teanolgy</h3>
             <p className="text-muted teanology-menu-update">
               Teanology menu update.{" "}
-              <a href="/home" style={{ color: "#539e6d" }}>
+              <a href="/home" style={{ color: "#F9E24B" }}>
                 Back to home page.
               </a>
             </p>

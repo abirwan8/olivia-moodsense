@@ -9,7 +9,7 @@ import { FaSmileWink } from "react-icons/fa";
 import { IoMdPerson } from "react-icons/io";
 import { NavLink, useNavigate } from "react-router-dom";
 
-import logoAdmin from "./Logo.svg";
+import logoAdmin from "./Logo-Moodsense.svg";
 
 const Sidebar = ({ children }) => {
   const navigate = useNavigate();
