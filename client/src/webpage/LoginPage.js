@@ -8,12 +8,9 @@ import { Row, Col } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import Modal from "react-bootstrap/Modal";
-import Button from "react-bootstrap/Button";
 
-import Orbit2 from "../components/loginPage/img/orbit-cover.svg";
-import Mascot2 from "../components/loginPage/img/MascotHappy2.png";
 import SadMascot from "../components/loginPage/img/sad-mascot.svg";
-import Logo from "../components/loginPage/img/Logo.svg";
+import Logo from "../components/loginPage/img/Logo.png";
 
 function LoginPage() {
   const navigate = useNavigate();
@@ -91,10 +88,6 @@ function LoginPage() {
   return (
     <div className="box">
       <Row>
-        <Col md={6}>
-          <img src={Orbit2} alt="bg-cover" className="bg-cover"></img>
-          <img src={Mascot2} alt="mascot-cover" className="mascot-cover"></img>
-        </Col>
         <Col md={6}>
           <img className="logo float-end" src={Logo} alt="logo-teanology" />
           <div className="login-box float-end">
