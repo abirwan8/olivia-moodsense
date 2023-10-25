@@ -83,7 +83,7 @@ const Home = () => {
         <div className="section section-1">
           <TopBar />
           <Row className="textcover">
-            <p className="whitetext fw-bold">Hi!, Welcome to</p>
+            <p className="hellotexttext fw-bold">Hi!, Welcome to</p>
             <img className="logo-moodsense" src={Moodsense}></img>
             <p className="browntext">Give a creative touch in choosing your dishes!</p>
           </Row>

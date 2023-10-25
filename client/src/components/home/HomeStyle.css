@@ -114,13 +114,13 @@ a {
   gap: 10px;
 }
 
-.whitetext {
+.hellotext {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
   line-height: 100%;
-  color: #fdf6ec;
+  color: #482F24;
 }
 
 .browntext{

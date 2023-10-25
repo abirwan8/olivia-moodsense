@@ -24,15 +24,6 @@ const TopBar1 = ({ name, ...props }) => {
       <Container fluid>
         <Row className="pt-3">
           <Col xs={10} md={11}>
-            <InputGroup className="res-topbar_left search__bar">
-              <InputGroup.Text className="search__bar search__left">
-                <i className="bi bi-search fs-6 text-secondary"></i>
-              </InputGroup.Text>
-              <Form.Control placeholder="Search Tea/Mood" type="search" className="search__bar search__center" />
-              <InputGroup.Text className="search__bar search__right">
-                <i className="bi bi-filter-left fs-4"></i>
-              </InputGroup.Text>
-            </InputGroup>
           </Col>
 
           <Col xs={2} md={1}>
