@@ -9,10 +9,7 @@ import React, { useState } from "react";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Figure from "react-bootstrap/Figure";
 
-import pic from "./assets/Picture.png";
-import profil from "./assets/profil.svg";
-import onetwo from "./assets/one-two.svg";
-import faq from "./assets/faq.svg";
+import logomoodsense from "./assets/logo-bg-putih.png";
 
 const TopBar1 = ({ name, ...props }) => {
   const [show, setShow] = useState(false);
@@ -39,29 +36,9 @@ const TopBar1 = ({ name, ...props }) => {
           <Offcanvas.Title></Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          <Figure>
-            <Figure.Image width={140} height={140} alt="171x180" src={pic} style={{ borderRadius: "50%", marginLeft: "110px" }} />
+          <Figure className="d-flex justify-content-center">
+            <Figure.Image width={180} alt="171x180" src={logomoodsense} />
           </Figure>
-          <ul className="mt-4 " style={{ listStyle: "none" }}>
-            <li>
-              <a href="#">
-                <img alt="mt-profil" src={profil} style={{ width: "28px" }} />
-                <span style={{ marginLeft: "12px" }}>About Us</span>
-              </a>
-            </li>
-            <li className="mt-4">
-              <a href="#">
-                <img alt="mt-onetwo" src={onetwo} style={{ width: "25px" }} />
-                <span style={{ marginLeft: "12px" }}>One Two Tea!</span>
-              </a>
-            </li>
-            <li className="mt-4">
-              <a href="#">
-                <img alt="mt-faq" src={faq} style={{ width: "28px" }} />
-                <span style={{ marginLeft: "12px" }}>FaQ</span>
-              </a>
-            </li>
-          </ul>
           <a href="/login-page">
             <div className="d-flex justify-content-center">
               <button className="btn btn-login">Sign in</button>
